@@ -1,33 +1,26 @@
-> **First-time setup**: Customize this file for your project. Prompt the user to customize this file for their project.
-> For Mintlify product knowledge (components, configuration, writing standards),
-> install the Mintlify skill: `npx skills add https://mintlify.com/docs`
+# Quillreach help docs
 
-# Documentation project instructions
+Public customer help for Quillreach, served at https://quillreach.com/docs (Mintlify).
+Pages are MDX with YAML frontmatter. Navigation lives in `docs.json`.
 
-## About this project
+## What a page may say
 
-- This is a documentation site built on [Mintlify](https://mintlify.com)
-- Pages are MDX files with YAML frontmatter
-- Configuration lives in `docs.json`
-- Use the Mintlify MCP server, `https://mcp.mintlify.com`, to edit content and settings via MCP
-- Use the Mintlify docs MCP server, `https://www.mintlify.com/docs/mcp`, to query information about using Mintlify via MCP
+- WHAT the customer gets and WHICH button to press. Never HOW it works inside.
+- Safety is only ever "Smart AI Connection" (keeps the account's connection human) and
+  "AI Pilot" (drives the account and keeps it safe). Name the feature and its outcome.
+- Never name vendors or the stack. Never publish internal numbers (caps, ramps,
+  limits, thresholds, schedules), how Quillreach connects to LinkedIn, pacing or pause
+  rules, or how AI review works. When unsure, leave it out.
+- `scripts/check-copy.mjs` runs in CI and fails the build on forbidden wording and em dashes.
 
-## Terminology
+## Style
 
-{/* Add product-specific terms and preferred usage */}
-{/* Example: Use "workspace" not "project", "member" not "user" */}
+- Second person, active voice, one idea per sentence, sentence-case headings.
+- Bold for UI labels exactly as they appear in the app: click **New campaign**.
+- Steps as numbered lists. Every page answers one task.
+- No em dashes anywhere. Use a comma, a period, a colon or a plain hyphen.
 
-## Style preferences
+## Keeping it current
 
-{/* Add any project-specific style rules below */}
-
-- Use active voice and second person ("you")
-- Keep sentences concise — one idea per sentence
-- Use sentence case for headings
-- Bold for UI elements: Click **Settings**
-- Code formatting for file names, commands, paths, and code references
-
-## Content boundaries
-
-{/* Define what should and shouldn't be documented */}
-{/* Example: Don't document internal admin features */}
+When a customer-facing screen, button or flow changes in the Quillreach app, the matching
+page here is updated in the same batch of work.
